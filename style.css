@@ -10,6 +10,7 @@
     width: 100vw;
     background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
+    overflow: hidden;
 }
 
 .todo-app {
@@ -47,7 +48,7 @@
 }
 
 input {
-    flex:  1;
+    flex: 1;
     border: none;
     outline: none;
     background-color: transparent;
@@ -114,4 +115,32 @@ ul li span {
 
 ul li span:hover {
     background-color: #edeef0;
+}
+
+
+@media (max-width:600px) {
+    .row {
+        border-radius: 30px;
+        padding: 5px 5px;
+        padding-left: 20px;
+    }
+
+    button {
+        position: relative;
+        padding: 11px 6px;
+        color: #ff5945;
+        font-size: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button::before {
+        content: "+";
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+    }
 }
